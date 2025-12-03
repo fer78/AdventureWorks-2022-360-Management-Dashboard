@@ -1,11 +1,12 @@
 -- View Columns
 SELECT COLUMN_NAME, DATA_TYPE, CHARACTER_MAXIMUM_LENGTH, IS_NULLABLE
 FROM INFORMATION_SCHEMA.COLUMNS
-WHERE TABLE_NAME = 'DimEmployee';
+WHERE TABLE_NAME = 'DimOrganization';
 
 
--- Top 10
-SELECT TOP 10 * FROM DimEmployee;
+-- * view
+SELECT * FROM DimOrganization;
 
 -- Total Rows
-SELECT COUNT(*) AS TotalRows FROM DimEmployee;
+SELECT COUNT(*) AS TotalRows FROM DimOrganization;
+
