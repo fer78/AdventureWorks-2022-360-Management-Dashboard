@@ -1,0 +1,16 @@
+-- View Columns
+SELECT COLUMN_NAME, DATA_TYPE, CHARACTER_MAXIMUM_LENGTH, IS_NULLABLE
+FROM INFORMATION_SCHEMA.COLUMNS
+WHERE TABLE_NAME = 'DimDate';
+
+
+-- Top 10
+SELECT TOP 10 * FROM dbo.DimDate;
+
+-- Total Rows
+SELECT COUNT(*) AS TotalRows FROM dbo.DimDate;
+
+SELECT FiscalYear, COUNT(*) AS Count
+FROM dbo.DimDate
+GROUP BY FiscalYear
+ORDER BY FiscalYear;

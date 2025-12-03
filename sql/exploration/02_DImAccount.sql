@@ -1,0 +1,19 @@
+
+-- View Columns
+SELECT COLUMN_NAME, DATA_TYPE, CHARACTER_MAXIMUM_LENGTH, IS_NULLABLE
+FROM INFORMATION_SCHEMA.COLUMNS
+WHERE TABLE_NAME = 'DimCustomer';
+
+
+-- Top 10
+SELECT TOP 10 * FROM dbo.DimCustomer;
+
+-- Total Rows
+SELECT COUNT(*) AS TotalRows FROM dbo.DimCustomer;
+
+SELECT GeographyKey, COUNT(*) AS Count
+FROM dbo.DimCustomer
+GROUP BY GeographyKey
+ORDER BY Count DESC;
+
+
